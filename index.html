@@ -60,6 +60,10 @@
     }
 
     function openWindow() {
+        liff.openWindow({
+          url: "https://line.me",
+          external: true
+        })
     }
 
     async function getFriendship() {
@@ -67,7 +71,7 @@
       document.getElementById("friendship").append(friend.getFriendship)
       if (friend.friendFlg) {
         if (confirm("คุณยังไม่ได้เพิ่ม BOT เป็นเพื่อน จะเพิ่มเลยไหม?")) {
-          window.location = "https://lin.ee/nUw9ESd"
+          window.location = "https://lin.ee/nUw9ESd+"
         }
       }
     }
