@@ -51,8 +51,10 @@
     }
 
     function logOut() {
-      liff.logOut()
-      window.location.reload()
+      if (liff.isLoggedIn()) {
+        liff.logout();
+        window.location.reload();
+        }
     }
 
     function closed() {
