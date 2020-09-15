@@ -65,7 +65,12 @@
     async function getFriendship() {
     }
 
-    async function sendMsg() {
+    async function sendMsg() {      
+      document.getElementById("type").append(liff.getContext().type)
+      document.getElementById("viewType").append(liff.getContext().viewtype)      
+      document.getElementById("utouId").append(liff.getContext().utouId)   
+      document.getElementById("roomId").append(liff.getContext().roomId)    
+      document.getElementById("groupID").append(liff.getContext().groupID)          
     }
 
     function getContext() {
@@ -100,7 +105,7 @@
       await liff.init({ liffId: "1654918601-b1Bj5YnD" })
        getEnvironment()
        getUserProfile()
-      // getContext() //
+       getContext() 
       // getFriendship()
       // createUniversalLink()
     }
